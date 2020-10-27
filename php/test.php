@@ -1,3 +1,6 @@
+<h1>Test</h1>
+
+
 <?php
 		
 	$name = "alamin";
@@ -19,7 +22,6 @@
 				'age'=> 23, 
 				'cgpa'=> 3.5
 			];*/
-
 
 	/*$student = [ 
 				's1'=>[
@@ -113,7 +115,8 @@ $data = "<table border=1>
 	}
 
 $data .= "</table>";
-
 echo $data;
 
 ?>
+
+
