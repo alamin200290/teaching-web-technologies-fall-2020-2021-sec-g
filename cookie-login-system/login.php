@@ -14,6 +14,10 @@
 			echo "Password field is empty...";
 		}
 	}
+
+	if(isset($_COOKIE['rm'])){
+		header('location: home.php');
+	}
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +38,7 @@
 					<td>Password</td>
 					<td><input type="password" name="password"></td>
 				</tr>
+				
 				<tr>
 					<td></td>
 					<td><input type="submit" name="submit" value="Submit"></td>
