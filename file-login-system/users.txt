@@ -1,0 +1,2 @@
+alamin|123|SE|alamin@aiub.edu
+xyz|456|CSE|xyz@aiub.edu

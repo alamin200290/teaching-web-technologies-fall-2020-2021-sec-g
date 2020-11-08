@@ -26,7 +26,7 @@
 	<title>Login Page</title>
 </head>
 <body>
-	<form method="post" action="loginCheck.php">
+	<form method="post" action="../php/loginCheck.php">
 		<fieldset>
 			<legend>LOGIN</legend>
 			<table>
