@@ -6,15 +6,21 @@
 
 	echo "done";*/
 
-	$myfile = fopen('test.txt', 'r');
+	//$myfile = fopen('test.txt', 'r');
 	//$data = fread($myfile, filesize('test.txt'));
 	//$data = fgets($myfile);
 	// /echo $data;
 
-	while($data = fgets($myfile)){
+/*	while($data = fgets($myfile)){
 		echo $data . "<br>";
 	}
 
-	fclose($myfile);
+	fclose($myfile);*/
 
+	$myfile = fopen('test.txt', 'a');
+	$data = "this is test line\r\n";
+	fwrite($myfile, $data);
+	fwrite($myfile, $data);
+	fwrite($myfile, $data);
+	fclose($myfile);
 ?>
