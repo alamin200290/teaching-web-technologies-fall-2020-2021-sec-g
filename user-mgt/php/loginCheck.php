@@ -1,6 +1,5 @@
 <?php
-	
-	require_once('../db/db.php');
+	require_once('../models/usersService.php');
 
 	if(isset($_POST['submit'])){
 
@@ -10,21 +9,14 @@
 
 		//validation
 		if($uname == ""){
-			
 			header('location: ../view/login.php?msg=null_username');
-
 		}else if(empty($pass)){
-			
 			header('location: ../view/login.php?msg=null_password');
-
 		}else{
 
-			$conn = getConnection();
-			$sql = "select * from users where username='$uname' and password='$pass'";
-			$result = mysqli_query($conn, $sql);
-			$row = mysqli_fetch_assoc($result);
-
-			if(count($row) > 0){
+			$user = ['username'=> $uname, 'password'=>$pass];
+			$status = validateUser($user);
+			if($status){
 				setcookie('isValid', 'true', time()+3600, '/');
 				header('location: ../view/home.php');
 			}else{
