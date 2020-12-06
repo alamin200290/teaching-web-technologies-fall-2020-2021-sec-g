@@ -23,6 +23,6 @@ function action(){
 
 function getName(){
 	let name = document.getElementById('name').value;
-	alert(name);
+	//alert(name);
 	document.getElementById('head').innerHTML = name;
 }
