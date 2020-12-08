@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX EXAMPLE</title>
+</head>
+<body>
+	<h1 id="h">This is AJAX example</h1>
+
+	<input type="button" name="button" value="click" onclick="test()">
+	<input type="button" name="button" value="submit" onclick="alert('another task')">
+
+	<script type="text/javascript">
+		
+		function test(){
+			
+			var xhttp = new XMLHttpRequest();
+
+			xhttp.open('GET', 'abc.php', false);
+			xhttp.send();
+			//document.getElementById('h').innerHTML = xhttp.responseText;
+			xhttp.onreadystatechange = function(){
+
+				if(this.readyState == 4 && this.status == 200){
+					//alert(this.responseText);
+					//document.getElementById('h').innerHTML = this.responseText;
+				}
+			}
+
+		}
+	</script>
+</body>
+</html>
